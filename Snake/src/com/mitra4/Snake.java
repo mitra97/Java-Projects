@@ -14,12 +14,12 @@ import java.util.Random;
 /**
  * Created by Mitra on 11/23/2016.
  */
-public class Snake implements ActionListener,KeyListener { //action listener is an interface with abstract methods the class can inherit.
+public class Snake implements ActionListener,KeyListener { 
     public JFrame frame;
     public Toolkit toolkit;
     public Panel panel;
     public static Snake snake;
-    public Timer timer = new Timer(20,this); //timer with an action listener. This refers to action listener
+    public Timer timer = new Timer(20,this); 
     public ArrayList<Point> snakeParts = new ArrayList<Point>();//An array list is an automatically growing array. Points are an object that has x and y values as its inputs. So we have an automatically growing array with each point having its own x and y coordinate.
     public int ticks = 0;
     public Point head, cherry;
@@ -37,7 +37,7 @@ public class Snake implements ActionListener,KeyListener { //action listener is 
         frame.setVisible(true); //can you see the frame
         frame.setSize(805, 700); //size of frame
         frame.setResizable(false);
-        frame.setLocationRelativeTo(null); //set location to middle? see at end
+        frame.setLocationRelativeTo(null);
         frame.add(panel = new Panel()); //just creates the panel, from panel class
         frame.addKeyListener(this);//allows us to input key movements in the game
         StartGame();
